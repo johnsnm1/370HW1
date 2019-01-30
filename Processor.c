@@ -34,13 +34,13 @@ int get_arr_val(int rand)
     return((rand % (1000-1)+1)*1);
 }
 
-float num_ratio(int *arr, int size )
+float num_ratio(int *arr, int size)
 {
     /*
      * This is the method that you need to implement.
      * Implement the following steps in the given order.
      *
-     * 1. Initialize variable count to 0. Thhis keeps track of odd number count.
+     * 1. Initialize variable count to 0. This keeps track of odd number count.
      *
      * 2. Loop through each element
      *      2 a. Check if that element is odd. If it is increase te variable count by 1.
@@ -50,6 +50,16 @@ float num_ratio(int *arr, int size )
      */
 
     /* Write your code in here */
+    int oddCount = 0; 
+    for(int i = 0; i < size; i++){
+        int temp = *(arr + i); 
+        if(temp % 2 == 1){ 
+            oddCount++; 
+        } 
+    }
+   
+    float ratio = oddCount / (size - oddCount); 
+    return ratio; 
 
 }
 
@@ -86,5 +96,6 @@ double get_running_ratio()
      */
 
     /* Write your code in here */
+    int numOfIterations = get_iteration_count(
 
 }
