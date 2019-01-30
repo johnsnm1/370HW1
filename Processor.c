@@ -96,6 +96,6 @@ double get_running_ratio()
      */
 
     /* Write your code in here */
-    int numOfIterations = get_iteration_count(
+    int numOfIterations; 
 
 }
