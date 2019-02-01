@@ -33,11 +33,13 @@ where you have to pass your first name and last name.
 C. Answer the following questions (1 point each, select/type the right answer).
 
 1. Malloc takes the number of bytes to be allocated as the argument? True/false
+    Answer:True 
 
 2. Not freeing the allocated memory throws a compilation error? True/false
-
+    Answer: false 
 3. In which header file is malloc defined in?  ______  
-
+    Answer: stdlib.h contains the malloc function. 
 4. In makefile the default target is always the ______ target. 
-
+    Answer: the Starter executable file. 
 5. Which symbol/sign is used in a makefile to use the value stored in particular variable? ______ 
+    Answer: the symbol/sign is the $ sign, with the variable name surrounded by parenthesis. s
