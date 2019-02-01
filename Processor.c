@@ -58,7 +58,7 @@ float num_ratio(int *arr, int size)
         } 
     }
    
-    float ratio = oddCount / (size - oddCount); 
+    float ratio = (float)oddCount / (float)(size - oddCount); 
     return ratio; 
 
 }
@@ -112,8 +112,9 @@ double get_running_ratio()
         runningRatio += (double)numRatio; 
         free(p_array); 
     }
-    runningRatio /= numOfIterations; 
-    printf("Largest array size was: %d\n",biggestArraySize); 
+    runningRatio = runningRatio / numOfIterations; 
+    printf("[Processor]: Number of iterations is %d\n",numOfIterations); 
+    printf("[Processor]: Largest array size is %d\n",biggestArraySize); 
     return runningRatio;
 
 }
