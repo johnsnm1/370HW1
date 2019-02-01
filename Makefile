@@ -1,4 +1,5 @@
 CC=gcc
+CXXFLAGS=-Wall -Wextra -Wpedantic -Werror -Wfatal-errors
 FILES=Starter.c Processor.c
 OUT_EXE = Starter
 build: $(FILES)
