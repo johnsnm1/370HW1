@@ -96,6 +96,24 @@ double get_running_ratio()
      */
 
     /* Write your code in here */
-    int numOfIterations; 
+    int numOfIterations = get_iteration_count(rand()); 
+    int biggestArraySize = 0; 
+    double runningRatio = 0; 
+    for(int i = 0; i < numOfIterations; i++){
+        int arraySize = get_arr_size(rand()); 
+        int *p_array =(int *)malloc(sizeof(int) * arraySize); 
+        if(biggestArraySize < (sizeof(int) * arraySize)){
+            biggestArraySize = (sizeof(int) * arraySize); 
+        }
+        for(int j = 0; j < arraySize; j++){
+            p_array[j] = get_arr_val(rand()); 
+        }
+        float numRatio =  num_ratio(p_array,arraySize); 
+        runningRatio += (double)numRatio; 
+        free(p_array); 
+    }
+    runningRatio /= numOfIterations; 
+    printf("Largest array size was: %d\n",biggestArraySize); 
+    return runningRatio;
 
 }
